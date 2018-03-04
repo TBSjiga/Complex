@@ -13,32 +13,34 @@ void printresult(double z1, double z2)
 	{
 		if (z1 == 0)
 		{
-			cout << "0";
+			cout << "0"<<endl;
 		}
 	}
 	if (z2 > 0)
 	{
 		cout << "+";
 		cout << "i";
-		cout << "*";
-		cout << "(";
 		if (z2 != 1)
 		{
+			cout << "*";
+			cout << "(";
 			cout << "" << z2;
+			cout << ")" << endl;
 		}
-		cout << ")" << endl;
+		else cout << endl;
 	}
 	if (z2 < 0)
 	{
 		cout << "-";
 		cout << "i";
-		cout << "*";
-		cout << "(";
 		if (z2 != (-1))
 		{
+			cout << "*";
+			cout << "(";
 			cout << "" << fabs(z2);
+			cout << ")" << endl;
 		}
-		cout << ")" << endl;
+		else cout << endl;
 	}
 }
 complex add(complex a, complex b)
