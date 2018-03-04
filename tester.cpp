@@ -1,10 +1,10 @@
 #include "calculator.h" 
 #include <iostream> 
 using namespace std;
-complex add(complex a, complex b);
-complex multiply(complex a, complex b);
-complex substract(complex a, complex b);
-complex devide(complex a, complex b);
+void add(complex *a, complex *b);
+void multiply(complex *a, complex *b);
+void substract(complex *a, complex *b);
+void devide(complex *a, complex *b);
 
 int main()
 {
@@ -17,7 +17,7 @@ int main()
 		cin >> a.Re >> a.Im;
 		cout << endl;
 		cout << "Enter Re and Im of the second complex:" << endl;
-		cin >>b.Re >> b.Im;
+		cin >> b.Re >> b.Im;
 		cout << endl;
 		cout << "Chose operation:" << endl;
 		cout << "+   -   Addition" << endl;
@@ -30,22 +30,22 @@ int main()
 		{
 		case '+':
 		{
-			add(a, b);
+			add(&a, &b);
 		}
 		break;
 		case '-':
 		{
-			substract(a, b);
+			substract(&a, &b);
 		}
 		break;
 		case '*':
 		{
-			multiply(a, b);
+			multiply(&a, &b);
 		}
 		break;
 		case '/':
 		{
-			devide(a, b);
+			devide(&a, &b);
 		}
 		break;
 		default:
