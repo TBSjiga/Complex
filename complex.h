@@ -6,19 +6,19 @@ using namespace std;
 
 class Complex
 {
+private:
+	double Re;
+	double Im;
+
 public:
+	Complex(double real, double imag);
+	~Complex();
 	void add(Complex a, Complex b);
 	void multiply(Complex a, Complex b);
 	void substract(Complex a, Complex b);
 	void devide(Complex a, Complex b);
-	void reading1();
-	void reading2();
 	void menu(Complex a, Complex b);
 	void printResult(double r, double i);
-
-private:
-	double Re;
-	double Im;
 };
 
 #endif COMPLEX_H

@@ -4,13 +4,12 @@ int main()
 {
 	while (1)
 	{
-		Complex complex;
-		Complex a;
-		a.reading1();
+		cout << "_____________________________________________" << endl;
 
-		Complex b;
-		b.reading2();
+		Complex complex_1st(0, 0);
 
-		complex.menu(a, b);
+		Complex complex_2nd(0, 0);
+
+		complex_1st.menu(complex_1st, complex_2nd);
 	}
 }

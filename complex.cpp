@@ -1,16 +1,18 @@
 #include "complex.h" 
-//read 1st Complex
-void Complex::reading1() {
-	cout << "_____________________________________________" << endl;
-	cout << "Enter Re and Im of the first Complex: "<<endl;
+
+Complex::Complex(double real, double imag)
+{
+	Re = real;
+	Im = imag;
+	cout << "Enter Re and Im of the Complex: " << endl;
 	cin >> Re >> Im;
 }
-//read 2nd Complex
-void Complex::reading2() {
-	cout << "Enter Re and Im of the second Complex: " << endl;
-	cin >> Re >> Im;
+
+Complex::~Complex()
+{
+	
 }
-//result
+
 void Complex::printResult(double r, double i)
 {
 	cout <<endl<< "Result: ";
@@ -96,31 +98,31 @@ void Complex::menu(Complex a, Complex b)
 	cin >> op;
 	switch (op)
 	{
-	case '+':
-	{
-		add(a, b);
-	}
-	break;
-	case '-':
-	{
-		substract(a, b);
-	}
-	break;
-	case '*':
-	{
-		multiply(a, b);
-	}
-	break;
-	case '/':
-	{
-		devide(a, b);
-	}
-	break;
-	default:
-	{
-		cout << "Please, chose correct operation" << endl;
-	}
-	exit(1);
+		case '+':
+		{
+			add(a, b);
+		}
+		break;
+		case '-':
+		{
+			substract(a, b);
+		}
+		break;
+		case '*':
+		{
+			multiply(a, b);
+		}
+		break;
+		case '/':
+		{
+			devide(a, b);
+		}
+		break;
+		default:
+		{
+			cout << "Please, chose correct operation" << endl;
+		}
+		exit(1);
 	}
 	cout <<endl << "_____________________________________________" << endl;
 	cout << endl;
